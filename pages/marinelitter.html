@@ -43,7 +43,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="../pages/airbnb.html">
+									<a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/airbnb_project/AirbnbSQLDataCleaning(format%20update).pdf">
 										<h3>Airbnb</h3>
 										<p>SQL Data Cleaning #2</p>
 									</a>
@@ -67,7 +67,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="../pages/nashville.html">
+									<a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/nashvillehousing_project/NashvilleHousingSQLDataCleaning.pdf">
 										<h3>Nashville Housing</h3>
 										<p>SQL Data Cleaning #1</p>
 									</a>
@@ -94,31 +94,117 @@
                                         <a class="author"><span class="name"></span><img src="../images/Microsoft-Power-BI-Logo.png" alt="Microsoft PowerBI logo" /></a>
 									</div>
 								</header>
-								<span class="image featured"><img src="../images/brian-yurasits-y8k-dMPNWNI-unsplash (1).jpg" alt="brown chair on wooden porch" /></span>
-								<p><strong>Overview</strong>: The purpose of this project was to summarize and visualize the marine litter collection data from 2013-2021. The dataset for this project can be found <a href="https://www.kaggle.com/datasets/maartenvandevelde/marine-litter-watch-19502021">here</a>. The data was collected by the Marine LitterWatch mobile app developed by the European Environment Agency. More information can be found <a href="https://marinelitterwatch.discomap.eea.europa.eu/AboutMLW.html">here.</a></p>
+								<span class="image featured"><img src="../images/brian-yurasits-y8k-dMPNWNI-unsplash (1).jpg" height="500px" alt="water bottle" /></span>
+								<h3>Overview</h3>The purpose of this project was to summarize and visualize the marine litter collection data from 2013-2021. The dataset for this project can be found <a href="https://www.kaggle.com/datasets/maartenvandevelde/marine-litter-watch-19502021">here</a>. The data was collected by the Marine LitterWatch mobile app developed by the European Environment Agency. More information can be found <a href="https://marinelitterwatch.discomap.eea.europa.eu/AboutMLW.html">here.</a></p>
 
 								<div class="embed-responsive">
 									<embed
-									src="../notebooks/marine_litter.pdf#view=FitH&toolbar=0&navpanes=0"
+									src="../pages/marine_litter_dashboard.png"
 											width="100%";
-											height="650px";	
+											height="605px";	
 									>
                                     </embed>
 								</div>
 									
-								<p><em>Dashboard video can be found <a href="https://1drv.ms/v/s!Apy5Gw3KeDqKhQoxdOmsd93uTqxt?e=wQxW0M">here</a>.</em></p>
+								<p><em>Dashboard video can be found <a href="https://1drv.ms/v/s!Apy5Gw3KeDqKhQoxdOmsd93uTqxt?e=wQxW0M">here</a>. Link to PowerBI dashboard can be found <a href="https://1drv.ms/u/s!Apy5Gw3KeDqKhHzZj3FOW-BZ49ny?e=HicI2E">here</a>.</em></p>
 								
-								<p><em>Link to PowerBI dashboard can be found <a href="https://1drv.ms/u/s!Apy5Gw3KeDqKhHzZj3FOW-BZ49ny?e=HicI2E">here</a>.</em></p>	
+								<p><em>Full Marine Litter project python code can be found on my Github <a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/marinelitter_project/Marine%20Litter%20Watch%20Project.ipynb">here</a>.</em></p>
 								
-								<p><strong>Top Findings/Observations</strong>
+								<h3>Top Findings/Observations</h3>
 									<ul>
 										<li>During the period of 2013-2021, plastic made up 85% of all litter collected (the top item being cigarette butts and filters).</li>
-										<li>Cigarette butts and filters made up 28.63% of plastic litter collected (1.8M).</li>
+										<li>Cigarette butts and filters made up 28.63% of plastic litter collected (1.8M, rounded).</li>
 										<li>Glass/ceramics and Metal followed plastics at 5.4% and 3.97%, respectively.</li>
 										<li>2019 saw the highest litter collection at 754K.</li>
 									</ul>
 									
+								<h4>Category Totals</h4>
+								<div class="embed-responsive">
+									<table style="width:100%">
+										<tr>
+										  <th>Category</th>
+										  <th>Litter Total</th>
+										  <th>% of Litter Collected (overall)</th>
+										  <th>Top Litter Item</th>
+										  <th>Item Total</th>
+										  <th>% of Litter Collected (within Category)</th>
+										</tr>
+										<tr>
+										  <td>Chemicals</td>
+										  <td>14184.0</td>
+										  <td>0.68</td>
+										  <td>Paraffin/Wax</td>
+										  <td>14184.0</td>
+										  <td>100.00</td>
+										</tr>
+										<tr>
+										  <td>Cloth/textile</td>
+										  <td>30066.0</td>
+										  <td>1.45</td>
+										  <td>Other textiles (incl. rags)</td>
+										  <td>13834.0</td>
+										  <td>46.01</td>
+										</tr>
+										<tr>
+											<td>Glass/ceramics</td>
+											<td>112504.0</td>
+											<td>5.43</td>
+											<td>Glass or ceramic fragments > 2.5 cm</td>
+											<td>63418.0</td>
+											<td>56.37</td>
+										  </tr>
+										<tr>
+											<td>Metal</td>
+											<td>82404.0</td>
+											<td>3.97</td>
+											<td>Bottle caps, lids & pull tabs</td>
+											<td>26295.0</td>
+											<td>31.91</td>
+										</tr>
+										<tr>
+											<td>Paper/cardboard</td>
+											<td>42871.0</td>
+											<td>2.07</td>
+											<td>Other paper items</td>
+											<td>11943.0</td>
+											<td>27.86</td>
+										  </tr>
+										<tr>
+											<td style="color:#FF0000">Plastic</td>
+											<td style="color:#FF0000">1758360.0</td>
+											<td style="color:#FF0000">84.82</td>
+											<td>Cigarette butts and filters</td>
+											<td>503348.0</td>
+											<td>28.63</td>
+										</tr>
+										<tr>
+											<td>Processed/worked wood</td>
+											<td>18899.0</td>
+											<td>0.91</td>
+											<td>Other wood < 50 cm</td>
+											<td>5931.0</td>
+											<td>31.38</td>
+										  </tr>
+										<tr>
+											<td>Rubber</td>
+											<td>12482.0</td>
+											<td>0.60</td>
+											<td>Balloons and balloon sticks</td>
+											<td>4524.0</td>
+											<td>36.24</td>
+										</tr> 
+										<tr>
+											<td>Unidentified</td>
+											<td>1306.0</td>
+											<td>0.06</td>
+											<td>Other medical items (swabs, bandaging, adhesive plaster etc.)</td>
+											<td>1306.0</td>
+											<td>100.00</td>
+										  </tr>
+									  </table>
+									</div>	
 
+								<h3 style="padding-top: 50px;">Marine Litter - Jupyter Notebook</h3>	  
 								<div class="embed-responsive">
 									<embed
 									src="../notebooks/litter(updated).html"
@@ -128,10 +214,7 @@
                                     </embed>
 
 					
-								</div>
-
-								
-								<p><em>Full Marine Litter project python code can be found on my Github <a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/marinelitter_project/Marine%20Litter%20Watch%20Project.ipynb">here</a>.</em></p>		
+								</div>		
 
 								<a href="#topofpage">Back to top</a>
 								<footer>
