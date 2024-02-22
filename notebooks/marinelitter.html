@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Kendall Smith - Marine Litter - Data Manipulation/Exploration/Visualization</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../index.html">Home</a></h1>
+						<nav class="links">
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<section id="menu">
+
+					<!-- Links -->
+						<section>
+							<ul class="links">
+                                <li>
+									<a href="../pages/marinelitter.html">
+										<h3>Marine Litter</h3>
+										<p>Data Manipulation/Exploration/Visualization</p>
+									</a>
+								</li>
+								<li>
+									<a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/airbnb_project/AirbnbSQLDataCleaning(format%20update).pdf">
+										<h3>Airbnb</h3>
+										<p>SQL Data Cleaning #2</p>
+									</a>
+								</li>
+								<li>
+									<a href="../pages/humanresources.html">
+										<h3>Human Resources</h3>
+										<p>Analysis/Correlation</p>
+									</a>
+								</li>
+								<li>
+									<a href="../pages/productsales.html">
+										<h3>Product Sales</h3>
+										<p>Database Design/Data Manipulation</p>
+									</a>
+								</li>
+								<li>
+									<a href="../pages/movie.html">
+										<h3>Movies</h3>
+										<p>Analysis</p>
+									</a>
+								</li>
+								<li>
+									<a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/nashvillehousing_project/NashvilleHousingSQLDataCleaning.pdf">
+										<h3>Nashville Housing</h3>
+										<p>SQL Data Cleaning #1</p>
+									</a>
+								</li>
+							</ul>
+						</section>
+
+				</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<a name="topofpage"></a>
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2>Marine Litter</h2>
+										<p>Data Manipulation/Exploration/Visualization</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2022-09-27">July 11, 2023</time>
+										<a class="author"><span class="name"></span><img src="../images/python-logo.png" alt="python logo" /></a>
+                                        <a class="author"><span class="name"></span><img src="../images/Microsoft-Power-BI-Logo.png" alt="Microsoft PowerBI logo" /></a>
+									</div>
+								</header>
+								<span class="image featured"><img src="../images/brian-yurasits-y8k-dMPNWNI-unsplash (1).jpg" height="500px" alt="water bottle" /></span>
+								<h3>Overview</h3>The purpose of this project was to summarize and visualize the marine litter collection data from 2013-2021. The dataset for this project can be found <a href="https://www.kaggle.com/datasets/maartenvandevelde/marine-litter-watch-19502021">here</a>. The data was collected by the Marine LitterWatch mobile app developed by the European Environment Agency. More information can be found <a href="https://marinelitterwatch.discomap.eea.europa.eu/AboutMLW.html">here.</a></p>
+
+								<div class="embed-responsive">
+									<embed
+									src="../pages/marine_litter_dashboard.png"
+											width="100%";
+											height="605px";	
+									>
+                                    </embed>
+								</div>
+									
+								<p><em>Dashboard video can be found <a href="https://1drv.ms/v/s!Apy5Gw3KeDqKhQoxdOmsd93uTqxt?e=wQxW0M">here</a>. Link to PowerBI dashboard can be found <a href="https://1drv.ms/u/s!Apy5Gw3KeDqKhHzZj3FOW-BZ49ny?e=HicI2E">here</a>.</em></p>
+								
+								<p><em>Full Marine Litter project python code can be found on my Github <a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/marinelitter_project/Marine%20Litter%20Watch%20Project.ipynb">here</a>.</em></p>
+								
+								<h3>Top Findings/Observations</h3>
+									<ul>
+										<li>During the period of 2013-2021, plastic made up 85% of all litter collected (the top item being cigarette butts and filters).</li>
+										<li>Cigarette butts and filters made up 28.63% of plastic litter collected (1.8M, rounded).</li>
+										<li>Glass/ceramics and Metal followed plastics at 5.4% and 3.97%, respectively.</li>
+										<li>2019 saw the highest litter collection at 754K.</li>
+									</ul>
+									
+								<h4>Category Totals</h4>
+								<div class="embed-responsive">
+									<table style="width:100%">
+										<tr>
+										  <th>Category</th>
+										  <th>Litter Total</th>
+										  <th>% of Litter Collected (overall)</th>
+										  <th>Top Litter Item</th>
+										  <th>Item Total</th>
+										  <th>% of Litter Collected (within Category)</th>
+										</tr>
+										<tr>
+										  <td>Chemicals</td>
+										  <td>14184.0</td>
+										  <td>0.68</td>
+										  <td>Paraffin/Wax</td>
+										  <td>14184.0</td>
+										  <td>100.00</td>
+										</tr>
+										<tr>
+										  <td>Cloth/textile</td>
+										  <td>30066.0</td>
+										  <td>1.45</td>
+										  <td>Other textiles (incl. rags)</td>
+										  <td>13834.0</td>
+										  <td>46.01</td>
+										</tr>
+										<tr>
+											<td>Glass/ceramics</td>
+											<td>112504.0</td>
+											<td>5.43</td>
+											<td>Glass or ceramic fragments > 2.5 cm</td>
+											<td>63418.0</td>
+											<td>56.37</td>
+										  </tr>
+										<tr>
+											<td>Metal</td>
+											<td>82404.0</td>
+											<td>3.97</td>
+											<td>Bottle caps, lids & pull tabs</td>
+											<td>26295.0</td>
+											<td>31.91</td>
+										</tr>
+										<tr>
+											<td>Paper/cardboard</td>
+											<td>42871.0</td>
+											<td>2.07</td>
+											<td>Other paper items</td>
+											<td>11943.0</td>
+											<td>27.86</td>
+										  </tr>
+										<tr>
+											<td style="color:#FF0000">Plastic</td>
+											<td style="color:#FF0000">1758360.0</td>
+											<td style="color:#FF0000">84.82</td>
+											<td>Cigarette butts and filters</td>
+											<td>503348.0</td>
+											<td>28.63</td>
+										</tr>
+										<tr>
+											<td>Processed/worked wood</td>
+											<td>18899.0</td>
+											<td>0.91</td>
+											<td>Other wood < 50 cm</td>
+											<td>5931.0</td>
+											<td>31.38</td>
+										  </tr>
+										<tr>
+											<td>Rubber</td>
+											<td>12482.0</td>
+											<td>0.60</td>
+											<td>Balloons and balloon sticks</td>
+											<td>4524.0</td>
+											<td>36.24</td>
+										</tr> 
+										<tr>
+											<td>Unidentified</td>
+											<td>1306.0</td>
+											<td>0.06</td>
+											<td>Other medical items (swabs, bandaging, adhesive plaster etc.)</td>
+											<td>1306.0</td>
+											<td>100.00</td>
+										  </tr>
+									  </table>
+									</div>	
+
+								<h3 style="padding-top: 50px;">Marine Litter - Jupyter Notebook</h3>	  
+								<div class="embed-responsive">
+									<embed
+									src="../notebooks/litter(updated).html"
+											width="100%";
+											height="1200px";	
+									>
+                                    </embed>
+
+					
+								</div>		
+
+								<a href="#topofpage">Back to top</a>
+								<footer>
+									<ul class="stats">
+										<li>Data Manipulation-Exploration-Visualization</li>
+									</ul>
+								</footer>
+							</article>
+
+					</div>
+					
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/kendall-smith24/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/kendallsmith24" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Kendall Smith. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
