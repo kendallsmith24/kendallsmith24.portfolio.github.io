@@ -43,7 +43,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="../pages/airbnb.html">
+									<a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/airbnb_project/AirbnbSQLDataCleaning(format%20update).pdf">
 										<h3>Airbnb</h3>
 										<p>SQL Data Cleaning #2</p>
 									</a>
@@ -67,7 +67,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="../pages/nashville.html">
+									<a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/nashvillehousing_project/NashvilleHousingSQLDataCleaning.pdf">
 										<h3>Nashville Housing</h3>
 										<p>SQL Data Cleaning #1</p>
 									</a>
@@ -93,22 +93,240 @@
 										<a class="author"><span class="name"></span><img src="../images/SQL.png" alt="SQL logo" /></a>
 									</div>
 								</header>
-								<span class="image featured"><img src="../images/jordan-whitfield-sm3Ub_IJKQg-unsplash.jpg" alt="work harder blue neon sign" /></span>
-								<p><strong>Overview</strong>: The purpose of this project is to evaluate a company's HR data and make recruitment and retention recommendations where HR can focus their efforts. Next, will be an attempt to identify if a correlation exists between Employee Satisfaction, Performance, and Engagement scores. Specifically, the hypothesis will be that 1) satisfaction is highly correlated with engagement, 2) satisfaction is highly correlated with performance and 3) engagement is highly correlated with performance.</p>
-								<p>General analysis of the dataset was conducted (e.g. Race/Sex/Age/Salary Distributions, Number of employees hired/lost each year, etc.)</p>
-                                <p>Project dataset found <a href="https://www.kaggle.com/datasets/rhuebner/human-resources-data-set">here</a>. Codebook/Data Dictionary found <a href="https://rpubs.com/rhuebner/hrd_cb_v14">here</a>.</p>
-                                <p><em>If PDF does not render below it can be found on my Github <a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/humanresources_project/HumanResourcesAnalysis-Correlation(format%20update).pdf">here</a>.</em></p>
-                                <p><em>Full Human Resources (Analysis/Correlation) project code can be found on my Github <a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/humanresources_project/HumanResourses.sql">here</a>.</em></p>
+								<span class="image featured"><img src="../images/jordan-whitfield-sm3Ub_IJKQg-unsplash.jpg" height="500px" alt="work harder blue neon sign" /></span>
+								<h3>Overview</h3>The purpose of this project is to evaluate a company's HR data and make recruitment and retention recommendations where HR can focus their efforts. Next, will be an attempt to identify if a correlation exists between Employee Satisfaction, Performance, and Engagement scores. Specifically, the hypothesis will be that 1) satisfaction is highly correlated with engagement, 2) satisfaction is highly correlated with performance and 3) engagement is highly correlated with performance.</p>
+								<p>General analysis of the dataset was conducted (e.g. Race/Sex/Age/Salary Distributions, Number of employees hired/lost each year, etc.).</p>
+                            
+								<h3>Analysis Points</h3>
+								<p>The top 3 recruitment sources identified were <font color="#FF0000">Indeed (87)</font>, <font color="#FF0000">LinkedIn (76)</font> and <font color="#FF0000">Google Search (49)</font>. Due to the nature that some of the recruitment sources could be consolidated, these final numbers could be higher. Consultation with HR group on the
+									specific nature that each recruitment source differ from one another will be needed in order to provide a more accurate picture.
+								 </p>
+								<p>The only employees sourced from Diversity Job Fair were Black or African Americans (29, Women-15, Men-14). Recommendation for HR Recruitment: Re-evaluate the planning and 
+									execution of these events to determine why they do not attract potential hires from other 
+									diverse/ethnic groups (particularly those from groups that had low counts across all other 
+									recruitment sources (American Indian or Alaska Native and Hispanic).</p>
+								<h4># of Employees Recruited (by Sex)</h4>
+								<div class="embed-responsive">
+									<table style="width:100%">
+										<tr>
+										  <th>Recruitment Source</th>
+										  <th># of Employees Recruited</th>
+										  <th>Female</th>
+										  <th>Male</th>
+										</tr>
+										<tr>
+										  <td>CareerBuilder</td>
+										  <td>23</td>
+										  <td>16</td>
+										  <td>7</td>
+										</tr>
+										<tr>
+										  <td>Diversity Job Fair</td>
+										  <td>29</td>
+										  <td>15</td>
+										  <td>14</td>
+										</tr>
+										<tr>
+											<td>Employee Referral</td>
+											<td>31</td>
+											<td>11</td>
+											<td>20</td>
+										  </tr>
+										<tr>
+											<td style="color:#FF0000">Google Search</td>
+											<td style="color:#FF0000">49</td>
+											<td>33</td>
+											<td>16</td>
+										</tr>
+										<tr>
+											<td style="color:#FF0000">Indeed</td>
+											<td style="color:#FF0000">87</td>
+											<td>50</td>
+											<td>37</td>
+										  </tr>
+										<tr>
+											<td style="color:#FF0000">LinkedIn</td>
+											<td style="color:#FF0000">76</td>
+											<td>44</td>
+											<td>32</td>
+										</tr>
+										<tr>
+											<td>On-line Web Application</td>
+											<td>1</td>
+											<td>0</td>
+											<td>1</td>
+										  </tr>
+										<tr>
+											<td>Other</td>
+											<td>2</td>
+											<td>1</td>
+											<td>1</td>
+										</tr> 
+										<tr>
+											<td>Website</td>
+											<td>13</td>
+											<td>6</td>
+											<td>7</td>
+										  </tr>
+									  </table>	
+								</div>
+	 
+								<h4># of Employees Recruited (by Race)</h4>
+								<div class="embed-responsive">
+									<table style="width:100%">
+										<tr>
+										  <th>Recruitment Source</th>
+										  <th># of Employees Recruited</th>
+										  <th>American Indian or Alaska Native</th>
+										  <th>Asian</th>
+										  <th>Black or African American</th>
+										  <th>Hispanic</th>
+										  <th>Two or more races</th>
+										  <th>White</th>
+										</tr>
+										<tr>
+										  <td>CareerBuilder</td>
+										  <td>23</td>
+										  <td>0</td>
+										  <td>2</td>
+										  <td>5</td>
+										  <td>0</td>
+										  <td>0</td>
+										  <td>16</td>
+										</tr>
+										<tr>
+										  <td>Diversity Job Fair</td>
+										  <td>29</td>
+										  <td>0</td>
+										  <td>0</td>
+										  <td>29</td>
+										  <td>0</td>
+										  <td>0</td>
+										  <td>0</td>
+										</tr>
+										<tr>
+											<td>Employee Referral</td>
+											<td>31</td>
+											<td>0</td>
+											<td>1</td>
+											<td>5</td>
+											<td>0</td>
+											<td>0</td>
+											<td>25</td>
+										  </tr>
+										<tr>
+											<td style="color:#FF0000">Google Search</td>
+											<td style="color:#FF0000">49</td>
+											<td>1</td>
+											<td>7</td>
+											<td>4</td>
+											<td>0</td>
+											<td>2</td>
+											<td>35</td>
+										</tr>
+										<tr>
+											<td style="color:#FF0000">Indeed</td>
+											<td style="color:#FF0000">87</td>
+											<td>1</td>
+											<td>10</td>
+											<td>17</td>
+											<td>1</td>
+											<td>4</td>
+											<td>54</td>
+										  </tr>
+										<tr>
+											<td style="color:#FF0000">LinkedIn</td>
+											<td style="color:#FF0000">76</td>
+											<td>1</td>
+											<td>8</td>
+											<td>16</td>
+											<td>0</td>
+											<td>4</td>
+											<td>47</td>
+										</tr>
+										<tr>
+											<td>On-line Web Application</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>1</td>
+										  </tr>
+										<tr>
+											<td>Other</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>2</td>
+										</tr> 
+										<tr>
+											<td>Website</td>
+											<td>13</td>
+											<td>0</td>
+											<td>1</td>
+											<td>4</td>
+											<td>0</td>
+											<td>1</td>
+											<td>7</td>
+										  </tr>
+									  </table>
+									</div>
+									  
+									  <p><em>The results from the below SQL queries were used to product the tables above.</em></p>
+
+									  <div class="row">
+										<div class="column">
+										  <img src="../pages/recruitment_source_sex_sql.png" height="450px" alt="recruit_source_sex_sql_query" style="width:100%">
+										</div>
+										<div class="column">
+										  <img src="../pages/recruitment_source_race.png" height="450px" alt="recruit_source_race_sql_query" style="width:100%">
+										</div>
+									  </div>
+
 								
+									  
+								<h4>Reasons for Employee Resignations</h4>
 								<div class="embed-responsive">
 									<embed
-									src="../sql/HumanResourcesAnalysis-Correlation(format update).pdf#view=FitH&toolbar=0&navpanes=0"
+									src="../pages/Reasons_for_Departure.png"
 											width="100%";
-											height="1200px";	
+											height="510px";	
 									>
-                                    </embed>
+                                    </embed>	
 								</div>
 
+								<div class="row">
+									<div class="column">
+									  <p style="width:100%">
+										<h3>Analysis Points</h3>
+										</p>
+										<p><em>Note: Data, SQL queries, and results related to the employee tenure and retention analysis points below as well as correlation analysis can be found on the full project PDF on my Github <a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/humanresources_project/HumanResourcesAnalysis-Correlation(format%20update).pdf">here</a>.</em></p>
+										<p>Of the employees that voluntarily left the company, the highest numbers departed at the 3-year 
+											mark (20, Women-12, Men-8), next at the 1-year mark (18, Women-9, Men-9) and finally the 4-
+											year mark (13, Women-8, Men-5).
+										</p>
+										<p>Recommendations for Retention: these year-marks could be 
+											used in conjunction with the reasons for voluntary departure to get employees to stay before 
+											they consider leaving. Ex. Prior to when an employee reaches the 3-year and 4-year marks 
+											(perhaps 6 months before), open a dialogue with them on whether they are interested in lateral 
+											or promotional opportunities.
+										</p>
+										<p>Project dataset found <a href="https://www.kaggle.com/datasets/rhuebner/human-resources-data-set">here</a>. Codebook/Data Dictionary found <a href="https://rpubs.com/rhuebner/hrd_cb_v14">here</a>.</p>
+								<p><em>Full project PDF found <a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/humanresources_project/HumanResourcesAnalysis-Correlation(format%20update).pdf">here</a>. Full Human Resources (Analysis/Correlation) project SQL code can be found on my Github <a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/humanresources_project/HumanResourses.sql">here</a>.</em></p>
+									</div>
+									<div class="column">
+										<p><em>The results from the below SQL query were used to product the chart above.</em></p>
+									  <img src="../pages/reasons_for_departure_sql.png" alt="departure_sql_queries" style="width:100%">
+									</div>
+									
+								  </div>
+
+								
 								<a href="#topofpage">Back to top</a>
 								<footer>
 									<ul class="stats">
