@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Kendall Smith - Service Ticket Support</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../index.html">Home</a></h1>
+						<nav class="links">
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<section id="menu">
+
+					<!-- Links -->
+						<section>
+							<ul class="links">
+								<li>
+									<a href="../pages/ticket_support.html">
+										<h3>Service Ticket Analysis</h3>
+										<p>Process Improvement</p>
+									</a>
+								</li>
+								<li>
+									<a href="../pages/marinelitter.html">
+										<h3>Marine Litter</h3>
+										<p>Data Manipulation - Exploration - Visualization</p>
+									</a>
+								</li>
+								<li>
+									<a href="../pages/airbnb.html">
+										<h3>Airbnb</h3>
+										<p>SQL Data Cleaning</p>
+									</a>
+								</li>
+								<li>
+									<a href="../pages/humanresources.html">
+										<h3>Human Resources</h3>
+										<p>Data and Correlation Analysis</p>
+									</a>
+								</li>
+								<li>
+									<a href="../pages/productsales.html">
+										<h3>Product Sales</h3>
+										<p>Database Design - Data Manipulation</p>
+									</a>
+								</li>	
+							</ul>
+						</section>
+
+				</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<a name="topofpage"></a>
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2>Service Ticket Analysis</h2>
+										<p>Process Improvement</p>
+									</div>
+									<div class="meta">
+										<h6>Insight-based</h6>
+										<time class="published" datetime="2024-05-28">May 28, 2024</time>
+										<a class="author"><span class="name"></span><img src="../images/excel-logo.png" alt="excel logo" /></a>
+									</div>
+								</header>
+								<span class="image featured"><img src="../images/julian-hochgesang-Dkn8-zPIbwo-unsplash.jpg" height="500px" alt="call center" /></span>
+								<h3>Overview</h3>A company is looking to update their current IT service ticket handling system by introducing a self-service application for clients to increase goal meet standards for overall closed tickets. Based on a preliminary analysis of all closed tickets for the previous year, a recommendation will be made on which ticket issues the self-service application should be assigned to moving forward, then applied to incoming tickets and monitored for comparison to determine success or failure. <br>This IT service group is a 24-hour operation divided into 3 teams. All incoming tickets are assigned to 4 different priority levels each with set hourly goal target intervals.</p>
+								
+								<h4>Key Data Characteristics</h4>
+								<ol>
+									<li>
+										Assigned Team - The team that the support ticket was assigned to. 24-hour operation: Team 1 - 5:00am to 1:00pm (Morning), Team 2 - 1:00pm to 9:00pm (Afternoon), Team 3 - 9:00pm to 5:00am (Overnight), Team 4 (implemented in 2023) - Self-Service Application.
+									</li>
+									<li>
+										Priority Level - The level of support ticket issue (Critical, High, Medium, Low).
+									</li>
+									<li>
+										Goal Achieved - Whether the ticket was resolved within the time limit acceptable for the issue level assigned (Critical – 4 hour resolution, High – 8 hour resolution, Medium – 12 hour resolution, Low – 24 hour resolution).
+									</li>
+								</ol>
+
+								<h3>Preliminary Analysis</h3><p>The 2022 data contained 100303 rows of data. Since the focus is on tickets where the goal was met, tickets where goal was not met were eliminated from the analysis. With the remaining 36,831 rows, tickets that were shown to be resolved in less than a minute were removed from consideration as it would be reasonable that it would take at least a minute to assess and resolve any ticket issue of any priority level across any of the current ticket channels (chat, email, phone).</p>
+								<h4>Measurements of Interest</h4>
+								
+								<ol>
+									<li>
+										Number of Tickets Closed (Goal Met) - <br>Upon analysis, medium priority level tickets ranked with the highest count closure at 12,506, with the 2nd highest percentage rate of closure at 40.67% (the 1st being low priority tickets at 49.48% with the 2nd highest count closure at 11,392).
+									</li>
+									<li>
+										Number of Tickets Closed w/in Origin Window (Goal Met) - <br>Origin Window is defined as the tickets that were opened and closed by the same team (shift) that met goal. Again, medium priority level cases ranked the highest across all teams (shifts) at 5,579 followed by low priority tickets at 4,699.
+									</li>
+								</ol>
+								<div class="row">
+									<div class="column">
+										<table style="width:100%">
+											<caption><h5>Number of Tickets Closed (Goal Met) - 2022 <br> against Overall</h5></caption>
+											<tr>		
+											  <th>Priority Level</th>
+											  <th># of Tickets <br>(Goal Met)</th>
+											  <th>Total # of Tickets <br>(Overall - Met and Unmet)</th>
+											  <th>% (Goal Met)</th>
+											</tr>
+											<tr>
+												<td>Critical</td>
+												<td>5015</td>
+												<td>23115</td>
+												<td>21.70%</td>
+											</tr>
+											<tr>
+												<td>High</td>
+												<td>7657</td>
+												<td>23153</td>
+												<td>33.07%</td>
+											</tr>
+											<tr>
+												<td>Low</td>
+												<td>11392</td>
+												<td>23024</td>
+												<td style="background-color:#0BDA51;color:#000000">49.48%</td>
+											</tr>
+											<tr>
+												<td>Medium</td>
+												<td>12506</td>
+												<td>30750</td>
+												<td>40.67%</td>
+											</tr>
+											<tfoot style="font-size: 12px;">
+												<tr>
+													<td colspan="4">Note: Excludes tickets where Resolution Time is less than one minute.</td>
+												</tr>
+											</tfoot>
+										  </table>
+									</div>
+									<div class="column">
+										<table style="width:100%">
+											<caption><h5>Number of Tickets Closed w/in Origin Window <br>(Goal Met) - 2022</h5></caption>
+											<tr>		
+											  <th>Team</th>
+											  <th>Critical <br>(4 hrs.)</th>
+											  <th>High <br>(8 hrs.)</th>
+											  <th>Medium <br>(12 hrs.)</th>
+											  <th>Low <br>(24 hrs.)</th>
+											  <th>Total # of Tickets</th>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>839</td>
+												<td>1112</td>
+												<td>1403</td>
+												<td>1086</td>
+												<td>4440</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>1400</td>
+												<td>1698</td>
+												<td>2240</td>
+												<td>1718</td>
+												<td>7056</td>
+											  </tr>
+											<tr>
+												<td>3</td>
+												<td>1488</td>
+												<td>1504</td>
+												<td>2136</td>
+												<td>1895</td>
+												<td>7023</td>
+											</tr>
+											<tr style="color:#000000;">		
+												<td><strong>Total</strong></td>
+												<td><strong>3727</strong></td>
+												<td><strong>4314</strong></td>
+												<td><strong>5779</strong></td>
+												<td><strong>4699</strong></td>
+												<td><strong>18519</strong></td>
+											  </tr>
+											<tfoot style="font-size: 12px;">
+												<tr>
+													<td colspan="6">Note: Origin Window is defined as the tickets that were opened and closed by the same Team that met goal. Also excludes tickets where Resolution Time is less than one minute.</td>
+												</tr>
+											</tfoot>
+										  </table>
+									</div>
+								</div>
+								
+
+								<h4>Recommendation</h4>
+								<p>
+									Medium priority level tickets have both the highest number of tickets closed overall as well as within Origin Window however the ticket issues assigned with this level are Hardware Issue and Installation assistance and do not lend themselves well to a self-service application as do those of low priority tickets (Cancellation request, Billing inquiry, and refund request). <br>Since low priority ticket issues are more applicable to the intended ticket handling upgrade and have the highest percentage rate of closure (Goal Met) at 49.48%, it is recommended that low priority tickets are managed through the self-service application moving forward
+
+								</p>
+								<h3>Results</h3>
+								<p>Preliminary analysis of the 2023 data remained the same as 2022 (only rows where goal was met were looked at and any tickets where the resolution time was less than one minute were disregarded). <br>The percentage rate of ticket closure increased across all priority levels (Critical – 21.70% to 23.13%, High – 33.07% to 34.05%, Low – 49.48% to 49.95%, and Medium – 40.67% to 42.51%). Although the percentage rate for medium priority tickets increased, the number of tickets closed (goal met) declined by 4,092 from the previous year. <br>Low priority level tickets closure overall (goal met) increased from 11,392 to 13,199 and the total number of tickets closed within Origin Window (for all priority levels) improved by 46.01% (increasing from 18,519 in 2022 to 27,039 in 2023).
+								</p>
+							
+																						  
+								<h4 style="padding-top: 30px;">Number of Tickets Closed (Goal Met) by Priority Level <br>2022 vs. 2023
+									</h4>
+								<div class="embed-responsive">
+									<embed
+									src="../screenshots/ticket_totals_2022vs2023.jpg"
+											width="100%";
+											height="500px";	
+									>
+                                    </embed>	
+								</div>
+
+								<div class="row">
+									<div class="column">
+									  <p style="width:100%">
+										<h3>Conclusion</h3>
+										</p>
+										<p>With the inclusion of self-service application into the company’s ticket handling system and its designated assignment to low priority ticket issues, the number of tickets that achieved goal increased overall, medium level tickets being the exception that declined (originally ranking the highest the prior year). Despite this, the closure percentage rate improved across the board, with closure rates within ticket Origin Window rising as well (low priority tickets showing the greatest improvement).
+										</p>
+								<p><em>Full project PDF found <a href="https://github.com/kendallsmith24/Portfolio-Projects/blob/main/service_ticket_analysis/Service_Ticket_Analysis_Project.pdf">here</a>. Full Service Ticket Analysis project with data can be found on my Github <a href="https://github.com/kendallsmith24/Portfolio-Projects/tree/main/service_ticket_analysis">here</a>.</em></p>
+									</div>
+									<div class="column">
+										<table style="width:100%">
+											<caption><h5>Number of Tickets Closed w/in Origin Window <br>(Goal Met) - 2023</h5></caption>
+											<tr>		
+											  <th>Team</th>
+											  <th>Critical <br>(4 hrs.)</th>
+											  <th>High <br>(8 hrs.)</th>
+											  <th>Medium <br>(12 hrs.)</th>
+											  <th>Low <br>(24 hrs.)</th>
+											  <th>Total # of Tickets</th>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td style="color:#089000">878</td>
+												<td style="color:#FF0000">1105</td>
+												<td style="color:#FF0000">820</td>
+												<td>-</td>
+												<td>2803</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td style="color:#089000">1799</td>
+												<td style="color:#089000">2220</td>
+												<td style="color:#FF0000">1689</td>
+												<td>-</td>
+												<td>5708</td>
+											  </tr>
+											<tr>
+												<td>3</td>
+												<td style="color:#089000">1943</td>
+												<td style="color:#089000">1932</td>
+												<td style="color:#FF0000">1454</td>
+												<td>-</td>
+												<td>5329</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>-</td>
+												<td>-</td>
+												<td>-</td>
+												<td style="color:#089000">13199</td>
+												<td>13199</td>
+											</tr>
+											<tr style="color:#000000;">		
+												<td><strong>Total</strong></td>
+												<td><strong>4620</strong></td>
+												<td><strong>5257</strong></td>
+												<td><strong>3963</strong></td>
+												<td><strong>13199</strong></td>
+												<td style="background-color:#0BDA51;color:#000000"><strong>27039</strong></td>
+											  </tr>
+											<tfoot style="font-size: 12px;">
+												<tr>
+													<td colspan="6">Note: Origin Window is defined as the tickets that were opened and closed by the same Team that met goal. Also excludes tickets where Resolution Time is less than one minute. <br>Green highlighted text indicates increase from previous year, red highlighted text indicates decrease from previous year. <br>'-' indicates that the value is not applicable to the Assigned Team or Priority Level.</td>
+												</tr>
+											</tfoot>
+										  </table>
+									</div>
+								</div>
+
+								
+								<a href="#topofpage">Back to top</a>
+								<footer>
+									<ul class="stats">
+										<li>Data Analysis - Data Visualization</li>
+									</ul>
+								</footer>
+							</article>
+
+					</div>
+					
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/kendall-smith24/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/kendallsmith24" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Kendall Smith. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
