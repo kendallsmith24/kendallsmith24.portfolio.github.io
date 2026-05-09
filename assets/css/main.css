@@ -1984,6 +1984,11 @@ input, select, textarea {
 				color: rgba(160, 160, 160, 0.3) !important;
 			}
 
+/* Figcaption */
+	figcaption {		
+		text-align: right;
+	}
+
 /* Form */
 
 	form {
