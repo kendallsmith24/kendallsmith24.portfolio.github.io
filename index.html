@@ -10,6 +10,12 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script>
+			// Disables automatic scrolling to the top of the page when navigating to a new page. This allows for the user to stay at the same scroll position when navigating between pages.
+			window.addEventListener("beforeunload", function () {
+				window.scrollTo(0, 0);
+			});
+		</script>
 	</head>
 	<body class="is-preload">
 
