@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Kendall Smith - Refund Processing</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../index.html">Home</a></h1>
+						<nav class="links">
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<section id="menu">
+
+					<!-- Links -->
+						<section>
+							<ul class="links">
+								<li>
+									<a href="../pages/receipts.html">
+										<h3>Refund Processing</h3>
+										<p>PDF Data Extraction</p>
+									</a>
+								</li>
+								<li>
+									<a href="../pages/ticket_support.html">
+										<h3>Service Ticket Analysis</h3>
+										<p>Process Improvement</p>
+									</a>
+								</li>
+								<li>
+									<a href="../pages/marinelitter.html">
+										<h3>Marine Litter</h3>
+										<p>Data Manipulation - Exploration - Visualization</p>
+									</a>
+								</li>
+								<li>
+									<a href="../pages/airbnb.html">
+										<h3>Airbnb</h3>
+										<p>SQL Data Cleaning</p>
+									</a>
+								</li>
+								<li>
+									<a href="../pages/humanresources.html">
+										<h3>Human Resources</h3>
+										<p>Data and Correlation Analysis</p>
+									</a>
+								</li>
+								<li>
+									<a href="../pages/productsales.html">
+										<h3>Product Sales</h3>
+										<p>Database Design - Data Manipulation</p>
+									</a>
+								</li>
+							</ul>
+						</section>
+
+				</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<a name="topofpage"></a>
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2>Refund Processing</h2>
+										<p>PDF Data Extraction</p>
+									</div>
+									<div class="meta">
+										<h6>Task-based</h6>
+										<time class="published" datetime="2026-05-08">May 08, 2026</time>
+										<a class="author"><span class="name"></span><img src="../images/python-logo.png" alt="python logo" /></a>
+                                        <a class="author"><span class="name"></span><img src="../images/excel-logo.png" alt="excel logo" /></a>
+									</div>
+								</header>
+
+								<span class="image featured"><img src="../images/alexander-grey-8lnbXtxFGZw-unsplash.jpg" height="500px" alt="one dollar bills cash" />
+                                    <figcaption>
+                                        Photo by <a href="https://unsplash.com/@sharonmccutcheon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexander Grey</a> on <a href="https://unsplash.com/photos/1-usa-dollar-banknotes-8lnbXtxFGZw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                                    </figcaption>
+                                </span>
+								
+								<h3>Overview</h3>
+								<div class="row">
+									<p>A company is seeking to amend their sales dispute process by having their large bulk customers submit their sales disputes with PDF copies of their sales receipts that were inserted with their deliveries. The primary complaint is that the discounts that they were toreceive were miscalculated resulting in an incorrect total amount paid. Customers are seeking refunds and/or credits for the difference. In order to mitigate the manual processing of these claims, the company seeks to have these incoming PDFs processed automatically to approve, reject and flag for manual review claims appropriately based on parameters given. The output will then be returned in Excel spreadsheets for record keeping and exception review.</p>
+									<h4 style="padding-top: 30px;">About the dataset</h4>
+									<p>The dataset contains 18 PDF files of mock sales receipts. Each receipt contains the following information: Date, Receipt #, ID No., Check No., Payment Method, Job, Quantity (QTY), Item #, Description, Unit Price, Discount, Line Total and Sales Tax. The dataset is representative of the actual receipt data that would be submitted by customers. The data was generated using a prompt fed into Microsoft CoPilot to create the textual data. Field and numerical values were manually adjusted to test the various logic conditions and simulate real-world scenarios (e.g., duplicates and missing values, miscalculated totals). Receipt #, ID No., and Check No. are used to identify unique and required values.</p>
+								
+								</div>
+
+								<h3>Data Extraction</h3>
+								<div class="row">
+									<p>The text and table data in these PDF files were retrieved using the Python library <strong><em>pdfplumber</em></strong>. The table extraction captures the Quantity (QTY), Item #, Description, Unit Price, Discount, and Line Total values. This table extraction excluded the Date, Receipt #, ID No., Check No., Payment Method and Job values. This excluded data was extracted using regex (regular expression) patterns.	
+									</p>
+								</div>
+																									  
+								<div class="row">
+									<div class="column">
+										<h5>Image of sales receipt pdf</h5>
+										<img src="../screenshots/receipt_pdf.png" height="630px" style="width:100%" alt="Image of sales receipt pdf">
+									</div>
+									<div class="column">
+										<h5>Image of sales receipt text extraction</h5>
+										<img src="../screenshots/receipt_text.png" height="630px" style="width:100%" alt="Image of sales receipt text extraction">
+									</div>
+								</div>
+
+								<h3>Data Transformation</h3>
+								<div class="row">
+									<p>Once the table and textual data are extracted, they are combined into a single dataframe to represent each item of each individual receipt labeled <em>receipt_detail_check</em>. The values include the Date, Receipt #, ID No., Check No., Quantity (QTY), Item #, Description, Unit Price, Discount, and Line Total. The discount and line total values are then recalculated and then compared directly to values printed on the PDF to determine whether or not a refund/credit is warranted and of what amount.</p>
+								</div>
+
+								<div class="embed-responsive">
+									<h4 style="padding-top: 30px;">Receipt Detail Check</h4>
+									<embed
+									src="../screenshots/receipt_detail.png"
+											alt="Image of receipt detail check"
+											width="100%";
+											height="360px";	
+									>
+                                    </embed>	
+								</div>
+
+								<h4>Receipt Comparison</h4>
+								<div class="row">
+									<p>The Receipt Comparison dataframe houses the recalculated values shown on the receipt and compares them with what was printed on the PDF. Based on the logic written in the code, an assessment on whether or not a refund/credit is warranted will be determined and of what amount.</p>								
+									<ul>
+										<li style="margin-left: 40px;"><strong>subtotal_recheck (recalculated)</strong> >>> Recalculated (sum) value of each Line Total (value does not included the discount value).</li>
+										<li style="margin-left: 40px;"><strong>receipt_subtotal (original, printed value)</strong> >>> Value printed on the PDF receipt. This value includes the discount value (Line Totals minus Total Discount on the printed PDF value).</li>
+										<li style="margin-left: 40px;"><strong>discount_recheck (recalculated)</strong> >>> Recalculated (sum) value of discounts shown on printed PDF receipt.</li>
+										<li style="margin-left: 40px;"><strong>receipt_discount (original, printed value)</strong> >>> Value (Total Discount) printed on the PDF receipt.</li>
+										<li style="margin-left: 40px;"><strong>total_recheck (recalculated)</strong> >>> Recalculated total value. This value includes the subtotal_recheck minus the discount_recheck plus the Sales Tax value printed on the PDF receipt.</li>
+										<li style="margin-left: 40px;"><strong>receipt_total (original, printed value)</strong> >>> Value printed on the PDF receipt. This value is the subtotal plus the Sales Tax printed on PDF receipt (Total Discount already deducted).</li>
+										<li style="margin-left: 40px;"><strong>receipt_comparison_difference</strong> >>> Difference between total_recheck value and receipt total value.</li>
+									</ul>
+									<p>The first check compares the recalculated total against the printed total in the Receipt Comparison dataframe. The second check compares the recalculated discount total against the printed discount total.</p>
+									<p>The below table visualizes and explainsthe reasoning used and the following images depict <em>Approved</em>, <em>Rejected</em> and <em>Manual Check</em> decisions.</p>
+									<div class="row">
+										<table style="width:100%">
+											<caption><h5>Refund/Credit Authorization Reasoning</h5></caption>
+											<tr>		
+											  <th>Total Recheck <br> Matches <br> Receipt Total</th>
+											  <th>Discount Recheck <br> Matches <br> Receipt Discount</th>
+											  <th>Refund <br> Authorized</th>
+											  <th>Refund <br> Amount (if applicable)</th>
+											</tr>
+											<tr>
+												<td>Yes</td>
+												<td>Yes</td>
+												<td>No</td>
+												<td style="background-color:#C0C0C0;color:#000000">None</td>
+											</tr>
+											<tr>
+												<td>Yes</td>
+												<td>No</td>
+												<td>Manual Check Needed - Total Match/Discount Mismatch</td>
+												<td style="background-color:#FF5F15;color:#000000">Receipt Difference - Pending Manual Check</td>
+											</tr>
+											<tr>
+												<td>No</td>
+												<td>Yes</td>
+												<td>Manual Check Needed - Total Mismatch/Discount Match</td>
+												<td style="background-color:#FF5F15;color:#000000">Receipt Difference - Pending Manual Check</td>
+											</tr>
+											<tr>
+												<td>No</td>
+												<td>No</td>
+												<td>Yes</td>
+												<td style="background-color:#0BDA51;color:#000000">Receipt Difference</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="row">	
+									<div class="container">
+										<div class="column_three">
+											<h4 style="padding-top: 30px;">Receipt Comparison - Approved</h4> 
+											<img src="../screenshots/approved_receipt.png" height="400px" alt="Image of receipt comparison - approved, dataframe transposed" style="width:100%">						
+										</div>
+										<div class="column_three">
+											<h4 style="padding-top: 30px;">Receipt Comparison - Manual Check</h4>
+											<img src="../screenshots/manual_receipt.png" height="400px" alt="Image of receipt comparison - manual check, dataframe transposed" style="width:100%">						
+										</div>
+										<div class="column_three">
+											<h4 style="padding-top: 30px;">Receipt Comparison - Rejected</h4>
+											<img src="../screenshots/rejected_receipt.png" height="400px" alt="Image of receipt comparison - rejected, dataframe transposed" style="width:100%">						
+										</div>
+									</div>
+									<figcaption><em>Note: Above receipts were individually processed. Receipt Comparison dataframes were transposed for better visualization.</em></figcaption>
+								</div>
+								
+
+								<div class="row"> 	
+									<h4 style="padding-top: 30px;">Accounting for duplicates and missing values</h4>
+										<p>Additional measures were implemented before authorizing any refund/credit approvals to account for duplicates and missing values in the dataset. Since receipt numbers are unique, updates have been made to identify and flag missing and duplicate receipt numbers <em>(indicated by " - D" next to the receipt number)</em>, and if found and tag for manual review. An update has also been made to flag and tag receipts with missing receipt dates.</p>
+								</div>
+
+								
+								<div class="embed-responsive">
+									<h4 style="padding-top: 30px;">Receipt Comparisons Accounting for Duplicates and Missing Values</h4>
+									<embed
+										src="../screenshots/duplicate_receipts.png";
+										alt="Image of receipt comparisons accounting for duplicates and missing values";
+										width="100%";
+										height="495px";	
+									>
+                                    </embed>	
+								</div>
+								
+								<h3 style="padding-top: 30px;">Results</h3>
+								<div class="row">
+									<p>As seen, receipts with duplicate receipt numbers have been correctly identified and flagged for manual review. It takes the first instance of a receipt number as the original and any subsequent instance of the same receipt number is flagged as a duplicate as seen with receipt number 8473. In the first instance, the refund/credit is declined and the second (duplicate - 8473 - D) is flagged for manual review. Receipts with missing receipt dates and receipt numbers have also been correctly flagged as well and show as such in the refund_authorized columns.
+									</p>
+								</div>
+ 
+								<h3>Data Loading</h3>
+								<div class="row">
+									<p>The receipt meta, receipt comparison and receipt details are then written to an Excel file using the <strong><em>xlsxwriter</em></strong> Python module. The Excel spreadsheet is formatted to display all of the data on one sheet for convenience. The second sheet contains an exact copy of the Receipt Detail Check, containing the quantity, item number, item description, unit price, discount and line total. The load process also includes a separate consolidated workbook that includes all of the receipt data processed.</p>
+								</div>
+										
+								
+								<div class="row">
+									<h4 style="padding-top: 30px;">Receipt Assessment (Loading Output to Excel)</h4>
+									<div class="embed-responsive" style="width: 1155px">
+										<!--<iframe width="100%" height="500px" frameborder="0" scrolling="no" alt="Displays the Receipt Assessment data for sales_receipt_1 output to Microsoft Excel." src="https://1drv.ms/x/c/8a3a78ca0d1bb99c/IQT0RJ22jjWOSpvWT2PCVckIAa-F3VnUyR5E_66vluFmOTk?em=2&wdAllowInteractivity=False&ActiveCell='Receipt%20Assessment'!A2&wdHideGridlines=True&wdHideHeaders=True&wdInConfigurator=True&wdInConfigurator=True&edaebf=rslc0"></iframe>-->
+										<embed
+											src="https://1drv.ms/x/c/8a3a78ca0d1bb99c/IQT0RJ22jjWOSpvWT2PCVckIAa-F3VnUyR5E_66vluFmOTk?em=2&wdAllowInteractivity=False&ActiveCell='Receipt%20Assessment'!A2&wdHideGridlines=True&wdHideHeaders=True&wdInConfigurator=True&wdInConfigurator=True&edaebf=rslc0"
+											alt="Displays the Receipt Assessment data for sales_receipt_1 output to Microsoft Excel.";
+											width="100%";
+											height="500px";>
+										</embed>
+									</div>
+									<figcaption><em>Note: Page may need to be refreshed if the above output does not display.</em></figcaption>	
+								</div>
+								
+								<h3 style="padding-top: 30px;">Limitations and Opportunities for Improvement</h3>
+								<div class="row">
+									<p>Although the mock up program works as intended it is limited that it not designed to handle scanned PDFs should they occur (a different approach would be needed). In addition, this mock up program only compares the receipt data against itself, recalculating the values for accuracy. It would be improved by checking against the company's internal records as well as the received documents. Handling missing values in other fields (customer_id_no, check_no, and payment_method) could also improve its functionality and efficiency.</p>					
+									<p><em>PDF datasets, Excel file output, and Python code can be found on my Github <a href="https://github.com/kendallsmith24/refund_processing_project/tree/main"><strong>here</strong></a>.</em></p>
+									</div>			
+								</div>	
+								
+								
+								<a href="#topofpage">Back to top</a>
+								<footer>
+									<ul class="stats">
+										<li>Data Extraction - Data Reporting - File Processing - Task Automation</li>
+									</ul>
+								</footer>
+							</article>
+
+					</div>
+					
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/kendall-smith24/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/kendallsmith24" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Kendall Smith. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
